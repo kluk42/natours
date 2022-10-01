@@ -1,0 +1,14 @@
+@import '../abstracts/variables';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+// This defines what 1rem is
+html {
+    font-size: 62.5%;
+}
