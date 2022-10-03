@@ -8,7 +8,7 @@ type Props = {
 
 export const TextButton: FC<Props> = ({ title, className, ...props }) => {
   return (
-    <button className={clsx('text-button', className)} {...props}>
+    <button className={clsx('btn-text', className)} {...props}>
       {title}
     </button>
   );

@@ -1,6 +1,7 @@
 import { FloatColumn } from '../../layouts/FloatGrid/FloatColumn';
 import { FloatRow } from '../../layouts/FloatGrid/FloatRow';
 import { TextButton } from '../TextButton/TextButton';
+import { Composition } from './Composition';
 import './NatoursAbout.scss';
 
 export const NatoursAbout = () => {
@@ -28,6 +29,9 @@ export const NatoursAbout = () => {
           </p>
 
           <TextButton title="Learn more &rarr;" />
+        </FloatColumn>
+        <FloatColumn className="col-1-of-2">
+          <Composition />
         </FloatColumn>
       </FloatRow>
     </section>
