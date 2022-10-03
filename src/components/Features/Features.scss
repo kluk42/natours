@@ -1,0 +1,45 @@
+@import '../../sass/abstracts/variables';
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../../assets/nat-4.jpg);
+    background-size: cover;
+
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}
+
+.feature-box {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .2s;
+
+    &__heading {
+        margin-bottom: 3px;
+    }
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        display: block;
+        background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        background-clip: text;
+        color: transparent;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}
