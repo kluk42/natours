@@ -1,5 +1,5 @@
 import logoPath from '../../assets/logo-white.png';
-import { Button } from '../Button/Button';
+import { Button, ButtonColorTypes } from '../Button/Button';
 import './Header.scss';
 
 export function Header() {
@@ -14,7 +14,7 @@ export function Header() {
           <span className="heading-primary_main">Outdoors</span>
           <span className="heading-primary_sub">is where life happens</span>
         </h1>
-        <Button title="Discover our tours" />
+        <Button colorType={ButtonColorTypes.White} title="Discover our tours" />
       </div>
     </header>
   );
