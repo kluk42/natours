@@ -1,3 +1,4 @@
+import { Booking } from '../../components/Booking/Booking';
 import { Features } from '../../components/Features/Features';
 import { NatoursAbout } from '../../components/NatoursAbout/NatoursAbout';
 import { StoriesSection } from '../../components/StoriesSection/StoriesSection';
@@ -10,6 +11,7 @@ export const NatoursMain = () => {
       <Features />
       <Tours />
       <StoriesSection />
+      <Booking />
     </main>
   );
 };

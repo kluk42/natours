@@ -1,0 +1,44 @@
+@import '../../sass/base/typography';
+@import '../../sass/abstracts/variables';
+
+.radio-input {
+    width: 50%;
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        margin-right: 2.5rem;
+
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__input:checked ~ &__label &__radio-button::after {
+        opacity: 1;
+    }
+}
