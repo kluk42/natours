@@ -1,12 +1,10 @@
 import './App.scss';
-import { Header } from './components/Header/Header';
-import { NatoursMain } from './Pages/NatoursMain/NatoursMain';
+import { Natours } from './Pages/Natours/Natours';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <NatoursMain />
+      <Natours />
     </div>
   );
 }
