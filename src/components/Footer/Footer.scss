@@ -1,14 +1,23 @@
 @import '../../sass/abstracts/variables';
 @import '../../sass/base/typography';
+@import '../../sass/abstracts/mixins';
 
 .footer {
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__logo-box {
         width: fit-content;
         margin: 0 auto 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
     }
 
     &__logo {
@@ -20,11 +29,18 @@
         border-top: 1px solid $color-grey-dark-1;
         padding-top: 2rem;
         width: fit-content;
+
+        @include respond(tab-port) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__list {
         list-style: none;
         display: flex;
+        justify-content: center;
     }
 
     &__item {
@@ -33,6 +49,10 @@
         
         &:not(:last-child) {
             margin-right: 1.5rem;
+
+            @include respond(phone) {
+                margin-right: .3rem;
+            }
         }
     }
 
@@ -63,5 +83,11 @@
         padding-top: 2rem;
         width: fit-content;
         margin-left: auto;
+
+        @include respond(tab-port) {
+            width: 80%;
+            margin: 0 auto;
+            justify-content: center;
+        }
     }
 }

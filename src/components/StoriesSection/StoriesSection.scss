@@ -1,4 +1,5 @@
 @import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 
 .stories-section {
     padding: 15rem 0;
@@ -7,6 +8,10 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 
     &__heading.heading-secondary {
         margin-bottom: 10rem;
@@ -35,6 +40,16 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        width: auto;
+        transform: skewX(0);
+    }
+
     &__story-heading {
         margin-bottom: 1.5rem;
     }
@@ -48,6 +63,14 @@
         transform: translateX(-3rem) skewX(12deg);
         display: flex;
         justify-content: center;
+
+        @include respond(tab-port) {
+            transform: translateX(-3rem) skewX(12deg);
+        }
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__image {
@@ -58,6 +81,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {

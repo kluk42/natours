@@ -39,8 +39,7 @@ export const Popup = ({ isVisible, onClose }: Props) => {
             consectetur adipiscing elit. Lectus urna duis convallis convallis tellus id interdum
             velit. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl.
             Ullamcorper malesuada proin libero nunc consequat. Sollicitudin tempor id eu nisl nunc
-            mi ipsum faucibus. Nec ultrices dui sapien eget mi proin sed libero enim. Tristique
-            sollicitudin nibh sit amet commodo nulla.
+            mi ipsum faucibus.
           </p>
           <Button colorType={ButtonColorTypes.Green} title="Book now" />
         </div>

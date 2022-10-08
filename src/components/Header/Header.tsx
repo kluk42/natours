@@ -1,5 +1,7 @@
 import logoPath from '../../assets/logo-white.png';
 import { Button, ButtonColorTypes } from '../Button/Button';
+
+import '../../sass/base/_typography.scss';
 import './Header.scss';
 
 export function Header() {

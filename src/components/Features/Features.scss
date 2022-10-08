@@ -1,4 +1,5 @@
 @import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 
 .section-features {
     padding: 20rem 0;
@@ -11,6 +12,10 @@
 
     transform: skewY(-7deg);
     margin-top: -10rem;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 
     & > * {
         transform: skewY(7deg);
@@ -26,6 +31,10 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: all .2s;
 
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
     &__heading {
         margin-bottom: 3px;
     }
@@ -37,6 +46,10 @@
         background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         background-clip: text;
         color: transparent;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
     }
 
     &:hover {
