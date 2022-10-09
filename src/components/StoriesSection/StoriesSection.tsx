@@ -6,6 +6,7 @@ import { TextButton } from '../TextButton/TextButton';
 
 import '../../sass/base/_typography.scss';
 import { BgVideo, Video } from '../BgVideo/BgVideo';
+import { NavigationLinks } from '../Navigation/Navigation';
 import './StoriesSection.scss';
 
 export const StoriesSection = () => {
@@ -14,7 +15,7 @@ export const StoriesSection = () => {
     { src: bgWebmVideoPath, type: 'video/webm' },
   ];
   return (
-    <section className="stories-section">
+    <section id={NavigationLinks.Stories} className="stories-section">
       <div className="bg-video">
         <BgVideo videos={videos} />
       </div>

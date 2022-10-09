@@ -3,6 +3,7 @@ import { Input } from '../Input/Input';
 
 import '../../sass/base/_typography.scss';
 import { Button, ButtonColorTypes } from '../Button/Button';
+import { NavigationLinks } from '../Navigation/Navigation';
 import { RadioInput } from '../RadioInput/RadioInput';
 import './Booking.scss';
 
@@ -11,7 +12,7 @@ export const Booking = () => {
   const [name, setName] = useState('');
   const [selectedOption, setSelectedOption] = useState<'small' | 'large' | ''>('');
   return (
-    <section className="section-book">
+    <section id={NavigationLinks.Booking} className="section-book">
       <div className="book">
         <form onSubmit={e => e.preventDefault()} noValidate className="book-form">
           <h2 className="heading-secondary book-form__heading">Start looking now</h2>

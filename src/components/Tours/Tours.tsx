@@ -3,6 +3,7 @@ import { FloatColumn } from '../../layouts/FloatGrid/FloatColumn';
 import { FloatRow } from '../../layouts/FloatGrid/FloatRow';
 import '../../sass/base/_typography.scss';
 import { Button, ButtonColorTypes } from '../Button/Button';
+import { NavigationLinks } from '../Navigation/Navigation';
 import { Popup } from '../Popup/Popup';
 import './Tours.scss';
 
@@ -14,7 +15,7 @@ export const Tours = () => {
   return (
     <>
       <Popup isVisible={isPopupVisible} onClose={() => setIsPopupVisible(false)} />
-      <section className="section-tours">
+      <section id={NavigationLinks.Tours} className="section-tours">
         <h2 className="heading-secondary section-tours__heading">Most popular tours</h2>
         <FloatRow>
           <FloatColumn className="col-1-of-3">

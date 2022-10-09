@@ -3,11 +3,12 @@ import { FloatColumn } from '../../layouts/FloatGrid/FloatColumn';
 import { FloatRow } from '../../layouts/FloatGrid/FloatRow';
 
 import '../../sass/base/_typography.scss';
+import { NavigationLinks } from '../Navigation/Navigation';
 import './Features.scss';
 
 export const Features = () => {
   return (
-    <section className="section-features">
+    <section id={NavigationLinks.Benefits} className="section-features">
       <FloatRow>
         <FloatColumn className="col-1-of-4">
           <div className="feature-box">

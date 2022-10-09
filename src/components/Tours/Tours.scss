@@ -168,7 +168,7 @@
         margin-bottom: 10rem;
     }
 
-    @include respond(tab-port) {
+    @media (max-width: 56.25em), (hover: none) {
         height: auto;
         border-radius: 3px;
         background-color: $color-white;

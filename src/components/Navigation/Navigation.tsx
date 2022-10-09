@@ -1,8 +1,17 @@
 import { useState } from 'react';
 import './Navigation.scss';
 
+export enum NavigationLinks {
+  About = 'about',
+  Benefits = 'benefits',
+  Tours = 'tours',
+  Stories = 'stories',
+  Booking = 'booking',
+}
+
 export const Navigation = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const onAnchorClick = () => setIsChecked(false);
   return (
     <div className="navigation">
       <input
@@ -20,27 +29,47 @@ export const Navigation = () => {
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a
+              href={`#${NavigationLinks.About}`}
+              className="navigation__link"
+              onClick={onAnchorClick}
+            >
               <span className="navigation__count">01 &nbsp;</span>About Natours
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a
+              href={`#${NavigationLinks.Benefits}`}
+              className="navigation__link"
+              onClick={onAnchorClick}
+            >
               <span className="navigation__count">02 &nbsp;</span>Your benefits
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a
+              href={`#${NavigationLinks.Tours}`}
+              className="navigation__link"
+              onClick={onAnchorClick}
+            >
               <span className="navigation__count">03 &nbsp;</span>Popular tours
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a
+              href={`#${NavigationLinks.Stories}`}
+              className="navigation__link"
+              onClick={onAnchorClick}
+            >
               <span className="navigation__count">04 &nbsp;</span>Stories
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a
+              href={`#${NavigationLinks.Booking}`}
+              className="navigation__link"
+              onClick={onAnchorClick}
+            >
               <span className="navigation__count">05 &nbsp;</span>Book now
             </a>
           </li>

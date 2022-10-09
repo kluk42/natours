@@ -1,12 +1,13 @@
 import { FloatColumn } from '../../layouts/FloatGrid/FloatColumn';
 import { FloatRow } from '../../layouts/FloatGrid/FloatRow';
+import { NavigationLinks } from '../Navigation/Navigation';
 import { TextButton } from '../TextButton/TextButton';
 import { Composition } from './Composition';
 import './NatoursAbout.scss';
 
 export const NatoursAbout = () => {
   return (
-    <section className="section-about">
+    <section id={NavigationLinks.About} className="section-about">
       <h2 className="heading-secondary">Exciting tours for adventurous people</h2>
       <FloatRow className="section-about__content-container">
         <FloatColumn className="col-1-of-2">
