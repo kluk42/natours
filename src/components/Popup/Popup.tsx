@@ -3,6 +3,8 @@ import secondImgPAth from '../../assets/nat-9.jpg';
 import { Button, ButtonColorTypes } from '../Button/Button';
 
 import clsx from 'clsx';
+import { useEffect, useRef } from 'react';
+import { useOnClickOutside } from '../../Hooks/useOnClickOutside';
 import '../../sass/base/_typography.scss';
 import './Popup.scss';
 
@@ -12,9 +14,24 @@ type Props = {
 };
 
 export const Popup = ({ isVisible, onClose }: Props) => {
+  const popupRef = useRef<HTMLDivElement | null>(null);
+  useOnClickOutside<HTMLDivElement>(popupRef, onClose);
+
+  useEffect(() => {
+    const onEscUp = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    window.addEventListener('keyup', onEscUp);
+
+    return () => window.removeEventListener('keydown', onEscUp);
+  }, []);
+
   return (
     <div className={clsx('popup', { popup__visible: isVisible })}>
-      <div className="popup__content">
+      <div ref={popupRef} className="popup__content">
         <div className="popup__left">
           <img src={firstImgPAth} alt="Popup image" className="popup__img" />
           <img src={secondImgPAth} alt="Popup image" className="popup__img" />

@@ -48,7 +48,7 @@ module.exports = {
     eqeqeq: ['error', 'smart'],
     'no-return-await': 'error',
     'no-cond-assign': 'error',
-    'no-debugger': 'error',
+    'no-debugger': 'off',
     'no-eval': 'error',
     'max-len': [
       'off',

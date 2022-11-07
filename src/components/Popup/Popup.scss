@@ -37,6 +37,7 @@
         @include respond(phone) {
             height: 95vh;
             overflow: scroll;
+            overflow-y: scroll;
         }
     }
 
