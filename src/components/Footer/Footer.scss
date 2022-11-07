@@ -3,6 +3,11 @@
 @import '../../sass/abstracts/mixins';
 
 .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 45rem));
+    justify-content: center;
+    row-gap: $gutter-vertical;
+
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
@@ -13,11 +18,8 @@
 
     &__logo-box {
         width: fit-content;
-        margin: 0 auto 8rem;
-
-        @include respond(tab-port) {
-            margin-bottom: 4rem;
-        }
+        margin: 0 auto 0;
+        grid-column: 1 / -1;
     }
 
     &__logo {

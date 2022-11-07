@@ -2,8 +2,6 @@ import logoImgPathLargeLowDensity from '../../assets/logo-green-1x.png';
 import logoImgPathLargeHighDensity from '../../assets/logo-green-2x.png';
 import logoImgPathPhoneLowDensity from '../../assets/logo-green-small-1x.png';
 import logoImgPathPhoneHighDensity from '../../assets/logo-green-small-2x.png';
-import { FloatColumn } from '../../layouts/FloatGrid/FloatColumn';
-import { FloatRow } from '../../layouts/FloatGrid/FloatRow';
 
 import './Footer.scss';
 
@@ -22,48 +20,42 @@ export const Footer = () => {
           />
         </picture>
       </div>
-      <FloatRow>
-        <FloatColumn className="col-1-of-2">
-          <div className="footer__navigation">
-            <ul className="footer__list">
-              <li className="footer__item">
-                <a href="#" className="footer__link">
-                  Company
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="#" className="footer__link">
-                  Privacy
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="#" className="footer__link">
-                  Careers
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="#" className="footer__link">
-                  Terms
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="#" className="footer__link">
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </div>
-        </FloatColumn>
-        <FloatColumn className="col-1-of-2">
-          <p className="footer__copyright">
-            Built by
+      <div className="footer__navigation">
+        <ul className="footer__list">
+          <li className="footer__item">
             <a href="#" className="footer__link">
-              Nikita Nemykin
+              Company
             </a>
-            for fun
-          </p>
-        </FloatColumn>
-      </FloatRow>
+          </li>
+          <li className="footer__item">
+            <a href="#" className="footer__link">
+              Privacy
+            </a>
+          </li>
+          <li className="footer__item">
+            <a href="#" className="footer__link">
+              Careers
+            </a>
+          </li>
+          <li className="footer__item">
+            <a href="#" className="footer__link">
+              Terms
+            </a>
+          </li>
+          <li className="footer__item">
+            <a href="#" className="footer__link">
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p className="footer__copyright">
+        Built by
+        <a href="#" className="footer__link">
+          Nikita Nemykin
+        </a>
+        for fun
+      </p>
     </footer>
   );
 };

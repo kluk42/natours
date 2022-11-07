@@ -2,12 +2,19 @@
 @import '../../sass/abstracts/mixins';
 
 .section-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 42rem));
+    row-gap: 8rem;
+    column-gap: $gutter-vertical;
+    justify-content: center;
+    align-items: center;
+
     background-color: $color-grey-light-1;
-    padding: 25rem 0;
+    padding: 25rem 10rem;
     margin-top: -20vh;
 
     @include respond(tab-port) {
-        padding: 20rem 0;
+        padding: 20rem 10rem;
     }
 
     &__content-container.row {
@@ -16,5 +23,17 @@
 
     &__paragraph-heading {
         margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        grid-column: 1 / 2;
+    }
+
+    &__header {
+        grid-column: 1 / -1;
+    }
+
+    &__composition {
+        height: 25rem;
     }
 }
